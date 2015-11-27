@@ -1,10 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 23/04/2015, 16:59:04
-    Author     : belchiorpalma
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -26,9 +19,11 @@
     <link href="lib/css/default.css" rel="stylesheet">
     <link href="lib/css/carousel.css" rel="stylesheet">
     <link href="lib/gridster/jquery.gridster.min.css" rel="stylesheet" >
-    <link href="lib/gridster/gridster.css" rel="stylesheet">
-    
-  
+     <link href="lib/gridster/gridster.css" rel="stylesheet">
+     
+	<!-- bxSlider CSS file -->
+	<link href="lib/css/jquery.bxslider.css" rel="stylesheet" />
+   
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="./lib/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -175,21 +170,70 @@
       
       <!-- Begin row -->
           <div class="row">
-            <div class="col-xs-6 gray no-float" style="width:60%">
-              <h2>Col 1</h2>
+            <div class="col-xs-6 gray no-float" style="width:70%">
+              <h2><div id="log"></div><button id="save" value="Salvar">Salvar</button><button id="build" value="Build">Build</button><button id="add" value="add">ADD+</button><button id="del" value="del">DEL-</button><button id="up" value="up">UP ^</button></h2>
               <!-- Begin Gridster -->
-               <div class="gridster demo">
-                <ul>
-                    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"></li>
-                    
-                </ul>
-               </div>
-              <!-- End Gridster -->
-           
               
+              <!-- 
+              <div class="gridster demo bxslider">
+              -->
+              <div class="" >
+                <ul class="bxslider">
+                    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" data-id="1" data-price="15.98">
+                    	<div style="background-image:url(lib/images/grelhados.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Primeiro</div>
+                    </li>
+                    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1"  data-id="2" data-price="16.55">
+                    	<div style="background-image:url(lib/images/kids.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Hamburger de Picanha</div>
+                    </li>
+                    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1"  data-id="3" data-price="11.11">
+                    	<div style="background-image:url(lib/images/massas.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Filézinho de Frango</div>
+                    </li>
+                    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1"  data-id="4" data-price="12.23">
+                    	<div style="background-image:url(lib/images/porcoes.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Calabresa Fatiada</div>
+                    </li>
+                     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" data-id="1" data-price="15.98">
+                    	<div style="background-image:url(lib/images/grelhados.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Steak de Frango à Parmegiana</div>
+                    </li>
+                    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1"  data-id="2" data-price="16.55">
+                    	<div style="background-image:url(lib/images/kids.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Hamburger de Picanha</div>
+                    </li>
+                    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1"  data-id="3" data-price="11.11">
+                    	<div style="background-image:url(lib/images/massas.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Filézinho de Frango</div>
+                    </li>
+                    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1"  data-id="4" data-price="12.23">
+                    	<div style="background-image:url(lib/images/porcoes.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Penultimo</div>
+                    </li>
+                    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1"  data-id="4" data-price="12.23">
+                    	<div style="background-image:url(lib/images/porcoes.jpg)" class="boxBgSlider"></div>
+                        <div style="" class="colorLightBlue boxBxSlider">Ultimo</div>
+                    </li>
+                    
+                
+             
+                </ul>
             </div>
-            <div class="col-xs-6 gray no-float" style="width:40%">
+              <!-- Start outside slide -->
+              <div class="outside">
+                  
+                  <p><a href="" id="slider-prev"></a> | <a href="javascript:void(0);" id="slider-next" class="bx-next"></a></p>
+               </div>
+              <!-- End outside slide -->
+              <!-- End Gridster -->
+            </div>
+            
+            <div class="col-xs-6 gray no-float" style="width:30%">
+            	<div id="cupom">Cupom</div>
               <h2>Col 2</h2>
+              
+              
             </div>
           </div>
       
@@ -212,30 +256,86 @@
     <script src="./lib/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./lib/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="./lib/gridster/jquery.gridster.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./lib/js/keyboard.js"></script>
+     <script src="./lib/gridster/jquery.gridster.min.js" type="text/javascript" charset="utf-8"></script>
+     <!-- bxSlider Javascript file -->
+     <!-- jQuery library (served from Google) -->
+	<script src="./lib/js/jquery.easing.1.3.js"></script>
+	<script src="./lib/js/jquery.bxslider.min.js"></script>
     <script>
-    	$(document).ready(function() {   
-			// keyboard
-			keyboard();
-			
-			 
-			// carousel
-		 
+    	$(document).ready(function() {      
 		   $('.carousel').carousel('pause');
 		   var gridster;
-		   gridster = $(".gridster ul").gridster({
-				  widget_base_dimensions: [100, 100],
+		   var element;
+		   
+		   // -----> start gridster
+		   /*
+		   $(".gridster ul").gridster({
+				widget_margins: [10, 10],
+				widget_base_dimensions: [100, 100] 
+			});*/
+			  gridster = $(".gridster ul").gridster({
+				  widget_base_dimensions: [160, 100],
 				  widget_margins: [10, 10],
 				  helper: 'clone',
 				  resize: {
-					enabled: false,
-					max_size: [2, 2],
+					enabled: true,
+					max_size: [1, 1],
 					min_size: [1, 1]
-				  }
-				  
-			}).data('gridster').disable();
-			// build
+				  },/*
+				  serialize_params: function ($w, wgd) {
+					return {
+						id: wgd.el[0].id,
+						col: wgd.col,
+						row: wgd.row,
+						htmlContent: $($w).html()
+					};*/
+					serialize_params: function($w, wgd) 
+					{ 
+						var el =  $($w).html().replace(/"/g, "''")
+						console.log(el)
+						
+						return { 
+							   id: $($w).attr('id'), 
+							   col: wgd.col, 
+							   row: wgd.row, 
+							   size_x: wgd.size_x, 
+							   size_y: wgd.size_y, 
+							   htmlContent : el
+							 };
+					}
+				
+			}).data('gridster');
+		   // -----< end gridster
+		   
+		   $('#save').on('click', function() {
+            var s = gridster.serialize();
+			
+			var request = $.ajax({
+			  url: "admin/insertGridster.php",
+			  method: "POST",
+			  data: { serialize : JSON.stringify(s) },
+			  dataType: "html"
+			});
+			 
+			request.done(function( msg ) {
+			  $( "#log" ).html( msg );
+			});
+			 
+			request.fail(function( jqXHR, textStatus ) {
+			   $( "#log" ).html("Request failed:"+ textStatus );
+			});
+			
+			
+				
+			
+			// para imprimir os dados
+            //$('#log').val(JSON.stringify(s));
+        });
+		
+		// build 
+		// build gridster
+			// sort serialization
+			/*
 			gridster.remove_all_widgets();
 					
 					// call ajax to get build
@@ -249,15 +349,12 @@
 					request.done(function( msg ) {
 					 	var serialization;	
 						serialization = msg;
-						/*
-						gridster = $(".gridster ul").gridster({
-						  widget_base_dimensions: [100, 100],
-						  widget_margins: [10, 10]
-						}).data('gridster');
-						*/
+						
 			  			serialization = Gridster.sort_by_row_and_col_asc(serialization);
 						$.each(serialization, function() {
-							gridster.add_widget('<li />', this.size_x, this.size_y, this.col, this.row);
+							//gridster.add_widget('<li />', this.size_x, this.size_y, this.col, this.row);
+							gridster.add_widget('<li   data-row="' + this.row + '"  data-col="' + this.col + '"  data-sizex="'+this.size_x+'" data-sizey="'+this.size_y+'" >' + this.htmlContent +
+                '</li>');
 						});	
 					  	$( "#log" ).html( "Done!" );
 					});
@@ -265,9 +362,155 @@
 					request.fail(function( jqXHR, textStatus ) {
 					   $( "#log" ).html("Request failed:"+ textStatus );
 					});
-		});
+			  */
+		
+			  /*
+		
+				gridster = $(".gridster ul").gridster({
+				  widget_base_dimensions: [100, 55],
+				  widget_margins: [5, 5]
+				}).data('gridster');*/
 		
 		
+				 $('#build').on('click', function() {
+					gridster.remove_all_widgets();
+					
+					// call ajax to get build
+					var request = $.ajax({
+					  url: "admin/getGridster.php",
+					  method: "POST",
+					  data: { gridsterId : 1 },
+					  dataType: "json"
+					});
+					 
+					request.done(function( msg ) {
+					 	var serialization;	
+						serialization = msg;
+						
+						//console.log(serialization);
+						/*
+						gridster = $(".gridster ul").gridster({
+						  widget_base_dimensions: [160, 100],
+						  widget_margins: [10, 10]
+						  
+						}).data('gridster');
+						*/
+			  			serialization = Gridster.sort_by_row_and_col_asc(serialization);
+						
+						gridData = serialization;
+						//gridData = serialization;
+						var htmlString = '';
+						$.each(gridData, function (index, value) {
+				
+							htmlString += '<li   data-row="' + this.row + '"  data-col="' + this.col + '"  data-sizex="'+this.size_x+'" data-sizey="'+this.size_y+'" >' + this.htmlContent +
+                '</li>';
+						});
+				
+						$(".demo").html(htmlString);
+						/*
+						$.each(serialization, function() {
+							gridster.add_widget('<li />', this.size_x, this.size_y, this.col, this.row);
+							
+						});	*/
+					  	$( "#log" ).html( "Done!" );
+					});
+					 
+					request.fail(function( jqXHR, textStatus ) {
+					   $( "#log" ).html("Request failed:"+ textStatus );
+					});
+					
+					
+					
+				 });
+				 
+				 // add grid
+				  $('#add').on('click', function() {
+					  gridster.add_widget('<li class="new">The HTML of the widget...</li>', 2, 1);
+				  });
+				   $('#del').on('click', function() {
+					  gridster.remove_widget( $('.gridster li').eq(element) );
+				  });
+				  
+				  $('.gridster li').on('click', function(event) {
+				  	 element = ($(this).index());
+				  });
+				  
+				  //SLIDE UP
+				  jQuery("#up").on("click", function () {
+					  var $ul = $('.demo ul');
+					  var y = $ul.scrollTop();
+					  var $firstChild = $ul.children().first();
+					  var step = $firstChild.outerHeight() + parseInt($firstChild.css('marginBottom'),10);
+					  
+					  console.log('before up', y, step);
+					  if (y >= 0) {
+						  y -= step;
+						  console.log('after up', y);
+						  
+						  $ul.stop().animate({
+							  scrollTop: y
+						  }, 100);
+					  }
+				  });
+				  
+				  
+				  
+				  var slider = $('.bxslider').bxSlider({
+				  mode: 'vertical',
+				  	slideWidth: 693 ,
+  					slideMargin: 3,
+					auto: false,
+  					autoControls: false,
+					pager: false,
+    				controls: false,
+					infiniteLoop: false,
+					minSlides: 1,
+    				maxSlides: 30,
+					moveSlides: 1, 
+					hideControlOnEnd: true,
+					adaptiveHeight: false,
+					/*nextSelector: '#slider-next',
+				    prevSelector: '#slider-prev',
+				    /*nextText: 'Próximo →',
+				    prevText: '← Anterior',*/
+					
+					easing: 'easeOutElastic',
+					useCSS: false,
+  					speed: 800,
+					useCSS: false
+				});
+				
+				
+				 $('#slider-next').click(function(){
+					  slider.goToNextSlide();
+					  return false;
+				  });
+				  
+				 $('#slider-prev').click(function() {
+					  
+					  slider.goToPrevSlide();
+					  return false;
+				  }); 
+				
+				// create cupom
+				$('.bxslider li').on('click', function(event) {
+					var price = $(this).attr("data-price");
+					var name=  $(this).html();
+					var id =  $(this).attr("data-id");
+					
+					var html = $('#cupom').html();
+					
+					$('#cupom').html(html+"<table><tr>"+"<td>"+id+"</td>"+"<td>"+name+"</td>"+"<td>"+price+"</td>"+"</tr></table>");
+					
+				  	 //element = ($(this).index());
+				  });
+		   
+		});// end document.ready
+		
+		
+
+     
+
     </script>
   </body>
 </html>

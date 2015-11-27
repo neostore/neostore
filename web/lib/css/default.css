@@ -1,0 +1,78 @@
+/* CSS Document */
+.gray{
+	border-right: 10px solid #FCFCFC;
+	display: table-cell;
+}
+.height50{
+	height:100%;
+}
+html,body,.container
+{
+    height:100%;
+}
+.container
+{
+    display:table;
+    width: 100%;
+ /*   margin-top: -50px;
+    padding-top: 50px;*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	
+}
+.navbar{
+	min-height:38px;
+}
+body > .container{
+	padding-top: 209px;
+}
+.page-header{
+	width:100%;
+	display: table-row;
+}
+.row-header{
+	height: 20px !important;
+    display: table-row;
+	background-color: #CCC;
+	width:100%;
+	float:none;
+	margin:0;
+	padding:0;
+}
+.text-header{
+	display: table-cell;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+.row-cell{
+	width:700px;
+	height:18px;
+	display:block;
+	
+}
+.menu-detail{
+	width:100%;
+	float:none;
+	list-style:none;
+}
+.menu-detail li{
+	width:130px;
+	float:left;
+	height:18px;
+}
+.group {display: table-row-group; }
+.row
+{
+    height: 100%;
+	display:table-row;
+    
+}
+.col-xs-6{
+	display:table-cell;
+	margin: 0;
+  	padding: 0;
+}
+.no-float{
+	float:none;
+}

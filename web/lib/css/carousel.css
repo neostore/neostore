@@ -1,0 +1,259 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #dadada;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 120px;
+  margin-bottom: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  margin:0;
+  padding:0;
+  bottom:0;
+  top:3px;
+  width:90%;
+  left:50px;
+}
+/* Carousel Control */
+.carousel-control {
+	width:60px;
+	opacity:0.20;
+}
+.carousel-control:hover{
+	width:60px;
+	opacity:0.40;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 120px;
+  background-color: #dadada;
+}
+.first-slide, .second-slide, .third-slide{
+  background-color: #dadada;
+  
+	
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 120px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* Buttons
+------------------------- */
+.btn-lg{
+	margin-top:12px;
+	margin-right:2px;
+	width:146px;
+	font-size:14px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 0px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+.colorPink{
+	background-color:#fd6a9b;
+	border: 1px solid #fc4280;
+}
+.colorPink:hover{
+	background-color:#fc4280;
+	border: 1px solid #fc4280;
+}
+.colorLightGreen{
+	background-color:#adda42;
+	border: 1px solid #96d502;
+}
+.colorLightGreen:hover{
+	background-color:#96d502;
+	border: 1px solid #96d502;
+}
+.colorLightBlue{
+	background-color:#4db9ec;
+	border: 1px solid #1ea7e7;
+}
+.colorLightBlue:hover{
+	background-color:#1ea7e7;
+	border: 1px solid #1ea7e7;
+}
+.colorRoxo{
+	background-color:#bd35da;
+	border: 1px solid #b50ed9;
+}
+.colorRoxo:hover{
+	background-color:#b50ed9;
+	border: 1px solid #b50ed9;
+}
+.colorLightOrange{
+	background-color:#edbd2c;
+	border: 1px solid #ebb100;
+}
+.colorLightOrange:hover{
+	background-color:#ebb100;
+	border: 1px solid #ebb100;
+}
+.colorDarkRed{
+	background-color:#da4242;
+	border: 1px solid #d91212;
+}
+.colorDarkRed:hover{
+	background-color:#d91212;
+	border: 1px solid #d91212;
+}
+.colorBlue{
+	background-color:#396cc8;
+	border: 1px solid #1956c6;
+}
+.colorBlue:hover{
+	background-color:#1956c6;
+	border: 1px solid #1956c6;
+}
+.colorDarkGreen{
+	background-color:#7ca216;
+	border: 1px solid #739d00;
+}
+.colorDarkGreen:hover{
+	background-color:#739d00;
+	border: 1px solid #739d00;
+}
+.colorLightRed{
+	background-color:#ff4b4b;
+	border: 1px solid #e14242;
+}
+.colorLightRed:hover{
+	background-color:#e14242;
+	border: 1px solid #e14242;
+}
+.colorOrange{
+	background-color:#ff9000;
+	border: 1px solid #e38000;
+}
+.colorOrange:hover{
+	background-color:#e38000;
+	border: 1px solid #e38000;
+}
+.colorDarkGray{
+	background-color:#707070;
+	border: 1px solid #545454;
+}
+.colorDarkGray:hover{
+	background-color:#545454;
+	border: 1px solid #545454;
+}
+.colorWhite{
+	background-color:#FFFFFF;
+	border: 1px solid #c0c0c0;
+	color: gray;
+}
+.colorWhite:hover{
+	background-color:#c0c0c0;
+	border: 1px solid #c0c0c0;
+	color: white;
+}

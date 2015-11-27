@@ -1,10 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 23/04/2015, 16:59:04
-    Author     : belchiorpalma
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt">
   <head>
